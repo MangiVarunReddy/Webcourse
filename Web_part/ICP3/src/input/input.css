@@ -1,0 +1,16 @@
+/* consists of font and color reltated to mockup */
+h2,hr{
+    color: #BCBBBB;
+    font-family: 'Lato', sans-serif;
+}
+/* consists of textcolor and font of these tags */
+h1,h3,a,p{
+    color: #747704;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+/* design for hr tag */
+hr{
+    border-width:4.5px;
+    margin-top: auto;
+}
