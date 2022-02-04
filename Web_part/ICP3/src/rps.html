@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- title of the page -->
+        <title>Game</title>
+    </head>
+    <body>
+        <!-- h1 tag representing the game -->
+        <h1>Play Rock-Paper-Scissor</h1>
+        <!-- h3 tag informs of game rules -->
+        <h3>This is Single Player Game (Player vs Computer)</h3>
+
+        <!-- image tag consists of all the three rock,paper, -->
+        <img src="../Images/RPS/Rock.png" alt="rock" onclick="result(1)"/>
+        <img src="../Images/RPS/Paper.png" alt="paper" onclick="result(2)"/>
+        <img src="../Images/RPS/Scissor.png" alt="scissor" onclick="result(3)"/>
+        <!--  h1 tag represents the score board of player and computer -->
+        <h1>Scores:</h1>
+        <!-- h2 tag consists of inline span tag which has id used for updating the player value and same goes for computer value -->
+        <h2>Player- <span id="pValue">0</span></h2>
+        <h2>Computer- <span id="cValue">0</span></h2>
+        <!-- JavaScript tag  -->
+        <script>
+            // to update computer points
+            var computerValue=0;
+            // to update player points
+            var playerValue =0;
+            // function which is called onclick of image and displays the score of player and alerts on the screen who won for every game.
+            function result(pValue){
+                var randValue=Math.floor(Math.random()*(2)+1);
+                console.log("value  and randValue ",playerValue,randValue);
+
+                if(pValue==1){
+                    if(randValue ==2){
+                        computerValue++;
+                        alert("Computer Wins");
+
+                    }else if(randValue==1){
+                        alert("Draw !! Try Again");
+                    }
+                    else{
+                        playerValue++;
+                        alert("Player Wins");
+                    }
+                }else if(pValue==2){
+                    if(randValue ==3){
+                        computerValue++;
+                        alert("Computer Wins");
+                    }else if(randValue==2){
+                        alert("Draw !! Try Again");
+                    }
+                    else{
+                        playerValue++;
+                        alert("Player Wins");
+                    }
+                }else{
+                    if(randValue ==1){
+                        computerValue++;
+                        alert("Computer Wins");
+                    }else if(randValue==3){
+                        alert("Draw !! Try Again");
+                    }
+                    else{
+                        playerValue++;
+                        alert("Player Wins");
+                    }
+                }
+                // this document tag with id is used to update the value on html page
+                document.getElementById("cValue").innerHTML=computerValue;
+                document.getElementById("pValue").innerHTML=playerValue;
+            }
+        </script>
+
+    </body>
+</html>
