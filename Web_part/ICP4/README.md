@@ -1,4 +1,4 @@
-## Mangi Varun Reddy - vmf9p@umsystem.edu
-## github: https://github.com/MangiVarunReddy/Webcourse/tree/main/Web_part/ICP4
+Venkata Naga Sai Srikanth Gollapudi – sggc9@umsystem.edu
+github: https://github.com/GollapudiSrikanth/WebMobileSpring2022/tree/main/Web/ICP4
 
 ### Calling a api on user action in Jquery.
