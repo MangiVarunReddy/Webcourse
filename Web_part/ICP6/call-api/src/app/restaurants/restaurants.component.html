@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <app-top></app-top>
+    <div class="row">
+        <a class="navbar-brand">Search Near By restaruants</a>
+        <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+          <div class="input-group mb-3">
+            <input type="text" [(ngModel)]="query" class="form-control" placeholder="Enter place here"
+              aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                (click)="getNearByPlaces()">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="show">
+        <div  *ngFor="let place of places">
+          <div class="row mt-3 col-sm-6">
+            <div class="card">
+              <h5 class="card-header text-success">{{place.name}}</h5>
+              <div class="card-body">
+                <span class="card-text"><strong>TimeZone</strong>:{{place.timezone}}</span><br>
+                <span class="card-text"><strong>Distance</strong> {{place.distance}}</span><br>
+            </div>
+              <div class="card-footer text-muted">
+                <p class="card-text"><strong>Location: </strong>{{place.location.formatted_address}}</p><br>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
